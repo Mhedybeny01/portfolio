@@ -6,7 +6,7 @@
     font-family: "Raleway", sans-serif;
 }
 body{
-    height: 1700px;
+    height: auto;
     width: 100%;
     background-image: var(--body-color);
     transition: 0.3s;
@@ -20,10 +20,14 @@ body.drak{
     --icon-color:rgb(0, 0, 0);
     --btn-color:rgb(255, 255, 255);
     --btn-background:rgb(14, 14, 14);
+    --color-skills:white;
+    --title-color:white;
+    --btn-search:rgb(16, 16, 16);
+   
     
 }
 :root{
-    --body-color: linear-gradient(to bottom, #081177, #55489a, #8d81bd, #c5bfde, #ffffff);
+    --body-color: linear-gradient(to bottom, #3927ff, #ffffffe0, #ffffffd7, #ffffffc8, #ffffff71);
     --nav-color:#08117708;
     --text-color:rgb(0, 0, 0);
     --search-bar:black;
@@ -35,6 +39,9 @@ body.drak{
     --icon-color:rgb(255, 255, 255);
     --btn-color:rgb(255, 253, 253);
     --btn-background:rgb(14, 14, 14);
+    --color-skills:white;
+    --title-color:rgb(0, 0, 0);
+    --btn-search:rgb(46, 46, 218);
 }
 
 
@@ -43,7 +50,7 @@ nav .navbar{
     justify-content: space-between;
     align-items: center;
     background-color: var(--nav-color);
-    height: 70px;
+    height: 60px;
     width: 100%;
     padding: 20px;
 }
@@ -51,7 +58,7 @@ nav .navbar{
 
 .links ul{
     display: flex;
-    gap: 15px;
+    gap: 40px;
     list-style-type: none;
 }
 .navbar .logo{
@@ -140,13 +147,13 @@ nav .navbar{
     padding: 5px;
     outline: 0;
     border: 1px solid rgba(54, 54, 54, 0.112);
-    background-color: var(--body-color);
+    background-color: var(--btn-color);
     border-radius: 5px;
 }
 .inpuSh button{
     padding: 5px;
     outline: 0;
-    background-color: var(--nav-color);
+    background-color: var(--btn-search);
     border-radius: 5px;
     color: var(--text-color);
     border: 1px solid transparent;
@@ -169,18 +176,25 @@ nav .navbar{
 
 .firstpage{
     display: flex;
-    gap: 100px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    flex-direction: column;
+    padding-top: 20px;
     flex-wrap: wrap;
     padding: 10px;
+    font-size: 20px;
+    height: 100vh;
+    z-index: -1;
 }
+
 .firstpage .t1{
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px; 
+    flex-direction: column;
+    align-items: center;
 }
 
 .social{
@@ -215,7 +229,10 @@ nav .navbar{
 .firstpage .t1 h2, h1, h3, p{
     color: var(--text-color);
 }
-
+.contact{
+    display: flex;
+    gap: 5px;
+}
 .btn{
    width: 150px;
    height: 40px;
@@ -236,21 +253,150 @@ nav .navbar{
 
 
 .firstpage .img img{
+    height: 200px;
+    width: 200px;
+    border-radius:50%;
+    border: 1px solid transparent;
+    
+}
+.aboutMe{
+    padding: 30px 70px;
+    width: 800px;
+  
+}
+.aboutMe h1 p{
+    bottom: 10px;
+}
+.aboutMe p{
+    margin-top: 10px;  
+}
+.aboutMe h2{
+    color: var(--text-color);
+    font-size: 30px;
+}
+.back2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.imgabout img{
     height: 400px;
     width: 400px;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    box-shadow:5px 10px  14px var(--text-color);
+
+}
+.back3{
+    height: 100vh;
+}
+.back3 .html .nvhtml{
+    height: 15px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgb(68, 77, 255);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+}
+.back3 .html .nvcss{
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgb(68, 77, 255);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+
+}
+.back3 .html .nvjavascript{
+    width: 280px;
+    border-radius: 20px;
+    background-color: rgb(68, 77, 255);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+}   
+.back3 .html .nvjava{
+    width: 270px;
+    border-radius: 20px;
+    background-color: rgb(68, 77, 255);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+}
+.back3 .html .nvphp{
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgb(68, 77, 255);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+}
+.back3 .html .nvsql{
+    width: 300px;
+    border-radius: 20px;
+    background-color: rgb(68, 77, 255);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+}
+.back3 .html .nvc{
+    width: 260px;
+    border-radius: 20px;
+    background-color: rgb(68, 77, 255);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+}
+.back3 .html .nvpy{
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgb(68, 77, 255);
+    font-size: 10px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.back3 .html h2{
+    color: var(--btn-color);
+    font-size: 15px;
+}
+.back3 .title{
+    color: var(--title-color);
+    text-align: center;
+    font-size: 35px;
+}
+.myskills .html{
+    margin-bottom: 20px;
+}
+
+.myskills{
+    background-color: #161616;
+    padding: 70px;
+    height: auto;
+    width: auto;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 170px;
+    flex-wrap: wrap;
+    border-radius: 0% 25% 0% 25%;
 }
 
 
+
+.myskills .imgsSkills img{
+    height: 250px;
+    width: 250px;
+
+}
 @media screen and (max-width: 600px) {
     .navbar .links{
         display: none;
     }
-    .firstpage{
-        flex-direction: column-reverse;
-    }
+   
     .firstpage .img img{
         height: 250px;
         width: 250px;
@@ -316,5 +462,13 @@ nav .navbar{
         color: var(--text-color);
         text-decoration: none;
     }
-
+    .back2{
+        height: 150vh;
+    }
+    .back3{
+        height: 200vh;
+    }
+    .myskills{
+        gap: 100px;
+    }
 }
