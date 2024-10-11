@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+body{
+    height: 1700px;
+    width: 100%;
+    background-image: var(--body-color);
+    transition: 0.3s;
+}
+body.drak{
+    --body-color:linear-gradient(to right top, #000000, #070707, #0d0d0d, #121212, #161616);
+    --nav-color:rgba(0, 0, 0, 0.151);
+    --text-color:rgb(247, 247, 247);
+    --search-bar:rgb(255, 255, 255);
+    --text-search-color:rgb(255, 255, 255);
+    --icon-color:rgb(0, 0, 0);
+    --btn-color:rgb(255, 255, 255);
+    --btn-background:rgb(14, 14, 14);
+    
+}
+:root{
+    --body-color: linear-gradient(to bottom, #081177, #55489a, #8d81bd, #c5bfde, #ffffff);
+    --nav-color:#08117708;
+    --text-color:rgb(0, 0, 0);
+    --search-bar:black;
+    --links-color:white;
+    --text-search-color:black;
+    --color-input:rgb(17, 17, 17);
+    --color-mode-input:rgb(196, 194, 194);
+    --button-color:rgb(22, 22, 22);
+    --icon-color:rgb(255, 255, 255);
+    --btn-color:rgb(255, 253, 253);
+    --btn-background:rgb(14, 14, 14);
+}
+
+
+nav .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-color);
+    height: 70px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.links ul{
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+}
+.navbar .logo{
+    color: var(--links-color);
+}
+.links ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--links-color);
+    
+   
+}
+
+.navbar .moode-and-search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.moode-and-search .moode,.moode-and-search .search {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0px 5px;
+
+}
+.moode i,.search i{
+    position: absolute;
+    color: var(--links-color);
+    transition: all 0.3s ease;
+}
+
+.moode i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.moode.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.moode.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search i.close{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.search.active i.close{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search.active i.search{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.inpuSh{
+
+        position: absolute;
+        left: 1250px;
+        top: -50%;
+        z-index: 1;
+        transition: 0.4s;
+
+}
+.inpuSh.display{
+
+    position: absolute;
+    left: 1250px;
+    top: 80px;
+
+}
+
+.inpuSh input{
+    padding: 5px;
+    outline: 0;
+    border: 1px solid rgba(54, 54, 54, 0.112);
+    background-color: var(--body-color);
+    border-radius: 5px;
+}
+.inpuSh button{
+    padding: 5px;
+    outline: 0;
+    background-color: var(--nav-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: 500;
+}
+
+.bar{
+    display: none;
+}
+.barclose{
+    display: none; 
+}
+.barlist{
+    display: none;
+}
+
+
+
+.firstpage{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.firstpage .t1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.social{
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+
+}
+.social .link{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--text-search-color);
+    font-weight: 700;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    transition: 0.4s;
+}
+.link:hover{
+    background-color: var(--text-color);
+    color: var(--icon-color);
+}
+.social .link i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstpage .t1 h2, h1, h3, p{
+    color: var(--text-color);
+}
+
+.btn{
+   width: 150px;
+   height: 40px;
+   border-radius: 5px;
+   outline: 0;
+   border: 1px solid transparent;
+   box-shadow: #161616;
+   font-weight: 700;
+   margin-top: 30px;
+   transition: 0.4s;
+   cursor: pointer;
+   
+}
+.btn:hover{
+    background-color: var(--btn-background);
+    color: var(--btn-color);
+}
+
+
+.firstpage .img img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    box-shadow:5px 10px  14px var(--text-color);
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar .links{
+        display: none;
+    }
+    .firstpage{
+        flex-direction: column-reverse;
+    }
+    .firstpage .img img{
+        height: 250px;
+        width: 250px;
+    }
+    .barDop i.x{
+        opacity: 0;
+        pointer-events: auto;
+    }
+    .barDop i{
+        color: var(--text-color);
+        font-size: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .barDop.Act i.x{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .barDop.Act i.menu{
+        opacity: 0;
+        pointer-events: auto;
+    }
+
+    .navbar .bar{
+        display: flex;
+        align-items: center;
+    }
+    .navbar .moode-and-search{
+        display: none;
+    }
+    .back1 .barlist{
+        display: none;
+        background-color: var(--nav-color);
+        height: 100vh;
+        width: 100%;
+        
+    }
+    .back1 .barlist.act2{
+        transition: 0.4s;
+        background-color: var(--nav-color);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+    
+
+
+    .barlist ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex; 
+        gap: 35px; 
+        flex-direction: column;
+       
+       
+    }
+    .barlist ul a{
+        font-size: 40px;
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+}
